@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{33E6D0A3-0436-40D8-8D2D-10B3535CDABA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CompilerExample</RootNamespace>
+    <AssemblyName>CompilerExample</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Compiler\Compiler.cs" />
+    <Compile Include="Compiler\CompilerException.cs" />
+    <Compile Include="Compiler\Token.cs" />
+    <Compile Include="Compiler\TokenDefinition.cs" />
+    <Compile Include="Compiler\Tokenizer.cs" />
+    <Compile Include="Compiler\TokenMatch.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TypedLang\AST\AdditionExpression.cs" />
+    <Compile Include="TypedLang\AST\AssignmentStatement.cs" />
+    <Compile Include="TypedLang\AST\CastExpression.cs" />
+    <Compile Include="TypedLang\AST\ConstantExpression.cs" />
+    <Compile Include="TypedLang\AST\DivideExpression.cs" />
+    <Compile Include="TypedLang\AST\Expression.cs" />
+    <Compile Include="TypedLang\AST\DataType.cs" />
+    <Compile Include="TypedLang\AST\ExpressionStatement.cs" />
+    <Compile Include="TypedLang\AST\ModuloExpression.cs" />
+    <Compile Include="TypedLang\AST\MultiplyExpression.cs" />
+    <Compile Include="TypedLang\AST\NegateExpression.cs" />
+    <Compile Include="TypedLang\AST\PrintStatement.cs" />
+    <Compile Include="TypedLang\AST\ProgramState.cs" />
+    <Compile Include="TypedLang\AST\RuntimeException.cs" />
+    <Compile Include="TypedLang\AST\Statement.cs" />
+    <Compile Include="TypedLang\AST\SubtractionExpression.cs" />
+    <Compile Include="TypedLang\AST\Variable.cs" />
+    <Compile Include="TypedLang\AST\VariableDefintionStatement.cs" />
+    <Compile Include="TypedLang\AST\VariableExpression.cs" />
+    <Compile Include="TypedLang\TypedLangCompiler.cs" />
+    <Compile Include="TypedLang\TypedLangTokenizer.cs" />
+    <Compile Include="TypedLang\VM\Instructions.cs" />
+    <Compile Include="TypedLang\VM\VirtualMachine.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Grammer.md" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
