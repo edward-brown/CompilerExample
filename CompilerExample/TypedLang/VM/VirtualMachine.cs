@@ -66,6 +66,16 @@ namespace CompilerExample.TypedLang.VM
 
         private string PopString()
         {
+            //var bytes = new List<byte>();
+            //for (int i = 0; i < 256; i++)
+            //{
+            //    byte b = PopByte();
+            //    if (b == 0)
+            //        break;
+            //    bytes.Add(b);
+            //}
+            //return Encoding.ASCII.GetString(bytes.ToArray());
+
             var sb = new StringBuilder();
             for (int i = 0; i < 256; i++)
             {
@@ -158,6 +168,7 @@ namespace CompilerExample.TypedLang.VM
             int adr;
             switch (op)
             {
+                // Addition Opcodes
                 case OpCodes.Add:
                     PushInt(PopInt() + PopInt());
                     break;
@@ -167,12 +178,48 @@ namespace CompilerExample.TypedLang.VM
                 case OpCodes.Cat:
                     PushString(PopString() + PopString());
                     break;
+
+                // Subtraction Opcodes
+                case OpCodes.Sub:
+                    PushInt(PopInt() - PopInt());
+                    break;
+                case OpCodes.fSub:
+                    PushFloat(PopFloat() - PopFloat());
+                    break;
+
+                // Multiplication Opcodes
+                case OpCodes.Mul:
+                    PushInt(PopInt() * PopInt());
+                    break;
+                case OpCodes.fMul:
+                    PushFloat(PopFloat() * PopFloat());
+                    break;
+
+                // Div Opcodes
                 case OpCodes.Div:
                     PushInt(PopInt() / PopInt());
                     break;
                 case OpCodes.fDiv:
                     PushFloat(PopFloat() / PopFloat());
                     break;
+
+                // Modulo Opcodes
+                case OpCodes.Mod:
+                    PushInt(PopInt() % PopInt());
+                    break;
+                case OpCodes.fMod:
+                    PushFloat(PopFloat() % PopFloat());
+                    break;
+
+                // Neg Opcodes
+                case OpCodes.Neg:
+                    PushInt(-PopInt());
+                    break;
+                case OpCodes.fNeg:
+                    PushFloat(-PopFloat());
+                    break;
+
+                // Load Opcodes
                 case OpCodes.Load:
                     PushInt(LoadInt(GetConstInt()));
                     break;
@@ -180,23 +227,63 @@ namespace CompilerExample.TypedLang.VM
                     PushFloat(LoadFloat(GetConstInt()));
                     break;
                 case OpCodes.sLoad:
-                    PushString(LoadString(GetConstInt());
+                    PushString(LoadString(GetConstInt()));
                     break;
+
+                // Casting Opcodes
                 case OpCodes.FloatToInt:
                     PushInt((int)PopFloat());
+                    break;
+                case OpCodes.StrToInt:
+                    PushInt(int.Parse(PopString()));
+                    break;
+                case OpCodes.IntToFloat:
+                    PushFloat(PopInt());
+                    break;
+                case OpCodes.StrToFloat:
+                    PushFloat(double.Parse(PopString()));
+                    break;
+                case OpCodes.IntToStr:
+                    PushString(PopInt().ToString());
                     break;
                 case OpCodes.FloatToStr:
                     PushString(PopFloat().ToString());
                     break;
-                case OpCodes.fMod:
-                    PushFloat(PopFloat() % PopFloat());
-                    break;
+                    
+                // Store Opcodes
                 case OpCodes.Store:
                     StoreInt(GetConstInt(), PopInt());
                     break;
                 case OpCodes.fStore:
                     StoreFloat(GetConstInt(), PopFloat());
                     break;
+                case OpCodes.sStore:
+                    StoreString(GetConstInt(), PopString());
+                    break;
+
+                // Push Opcodes <- Very possible these are wrong
+                case OpCodes.Push:
+                    PushInt(GetConstInt());
+                    break;
+                case OpCodes.fPush:
+                    PushFloat(GetConstFloat());
+                    break;
+                case OpCodes.sPush:
+                    PushString(GetConstString());
+                    break;
+
+                // Pop Opcodes
+                case OpCodes.Pop:
+                    PopInt();
+                    break;
+                case OpCodes.fPop:
+                    PopFloat();
+                    break;
+                case OpCodes.sPop:
+                    PopString();
+                    break;
+
+                // Print Opcode
                 case OpCodes.Print:
                     Console.WriteLine(PopString());
                     break;

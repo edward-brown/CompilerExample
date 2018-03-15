@@ -7,3 +7,12 @@ C:\Users\jordan.hemming.LAN\source\repos\CompilerExample\CompilerExample.Tests\o
 C:\Users\jordan.hemming.LAN\source\repos\CompilerExample\CompilerExample.Tests\obj\Debug\CompilerExample.Tests.csproj.CoreCompileInputs.cache
 C:\Users\jordan.hemming.LAN\source\repos\CompilerExample\CompilerExample.Tests\obj\Debug\CompilerExample.Tests.exe
 C:\Users\jordan.hemming.LAN\source\repos\CompilerExample\CompilerExample.Tests\obj\Debug\CompilerExample.Tests.pdb
+C:\Users\edward.brown.LAN\source\repos\CompilerExample\CompilerExample.Tests\bin\Debug\CompilerExample.Tests.exe.config
+C:\Users\edward.brown.LAN\source\repos\CompilerExample\CompilerExample.Tests\bin\Debug\CompilerExample.Tests.exe
+C:\Users\edward.brown.LAN\source\repos\CompilerExample\CompilerExample.Tests\bin\Debug\CompilerExample.Tests.pdb
+C:\Users\edward.brown.LAN\source\repos\CompilerExample\CompilerExample.Tests\bin\Debug\CompilerExample.dll
+C:\Users\edward.brown.LAN\source\repos\CompilerExample\CompilerExample.Tests\bin\Debug\CompilerExample.pdb
+C:\Users\edward.brown.LAN\source\repos\CompilerExample\CompilerExample.Tests\obj\Debug\CompilerExample.Tests.csprojResolveAssemblyReference.cache
+C:\Users\edward.brown.LAN\source\repos\CompilerExample\CompilerExample.Tests\obj\Debug\CompilerExample.Tests.csproj.CoreCompileInputs.cache
+C:\Users\edward.brown.LAN\source\repos\CompilerExample\CompilerExample.Tests\obj\Debug\CompilerExample.Tests.exe
+C:\Users\edward.brown.LAN\source\repos\CompilerExample\CompilerExample.Tests\obj\Debug\CompilerExample.Tests.pdb

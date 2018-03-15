@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CompilerExample.TypedLang;
+using CompilerExample.TypedLang.VM;
 
 namespace CompilerExample.Tests
 {
@@ -30,6 +31,10 @@ a = 5;
             var bytes = progState.CompileToVMCode();
             foreach (var b in bytes)
                 Console.WriteLine("0x{0:X2}", b);
+
+
+            VirtualMachine vm = new VirtualMachine(bytes.ToArray());
+            vm.Run();
 
             Console.ReadLine();
         }

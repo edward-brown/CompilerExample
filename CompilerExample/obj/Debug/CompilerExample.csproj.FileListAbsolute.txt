@@ -4,3 +4,9 @@ C:\Users\jordan.hemming.LAN\source\repos\CompilerExample\CompilerExample\bin\Deb
 C:\Users\jordan.hemming.LAN\source\repos\CompilerExample\CompilerExample\bin\Debug\CompilerExample.pdb
 C:\Users\jordan.hemming.LAN\source\repos\CompilerExample\CompilerExample\obj\Debug\CompilerExample.dll
 C:\Users\jordan.hemming.LAN\source\repos\CompilerExample\CompilerExample\obj\Debug\CompilerExample.pdb
+C:\Users\edward.brown.LAN\source\repos\CompilerExample\CompilerExample\bin\Debug\CompilerExample.dll
+C:\Users\edward.brown.LAN\source\repos\CompilerExample\CompilerExample\bin\Debug\CompilerExample.pdb
+C:\Users\edward.brown.LAN\source\repos\CompilerExample\CompilerExample\obj\Debug\CompilerExample.csprojResolveAssemblyReference.cache
+C:\Users\edward.brown.LAN\source\repos\CompilerExample\CompilerExample\obj\Debug\CompilerExample.csproj.CoreCompileInputs.cache
+C:\Users\edward.brown.LAN\source\repos\CompilerExample\CompilerExample\obj\Debug\CompilerExample.dll
+C:\Users\edward.brown.LAN\source\repos\CompilerExample\CompilerExample\obj\Debug\CompilerExample.pdb
